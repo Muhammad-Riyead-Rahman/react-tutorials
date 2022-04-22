@@ -1,14 +1,20 @@
-// import Todo from './Components/Todo';
-// import TodoObj from './Components/TodoObj';
-import Counter from './Components/Counter';
+import MyDateCount from './Components/MyDateCount';
+import { useState } from 'react';
 
 
 function App() {
+  const [show, setShow] = useState(true);
   return (
     <div className="App">
-      {/* <Todo /> */}
-      {/* <TodoObj /> */}
-      <Counter />
+      <div>
+          {show && <MyDateCount />}
+      </div>
+      <p>
+        <button type='button' onClick={() => setShow((prevShow) => !prevShow)}>
+          {show ? 'Hide post' : 'Show post'}
+        </button>
+      </p>
+      
     </div>
   );
 }
