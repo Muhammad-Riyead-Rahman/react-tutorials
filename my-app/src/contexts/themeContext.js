@@ -1,10 +1,10 @@
-import createContext from '../lib/Context';
+// import createContext from '../lib/Context';
 
-const themeContext = createContext({
-  theme: 'light',
-});
+// const themeContext = createContext({
+//   theme: 'light',
+// });
 
-export default themeContext;
+// export default themeContext;
 
 
 
@@ -13,8 +13,8 @@ export default themeContext;
 
 
 // //Using React default contex
-// import React from 'react';
+import React from 'react';
 
-// const themeContext = React.createContext();
+const themeContext = React.createContext();
 
-// export default themeContext;
+export default themeContext;
