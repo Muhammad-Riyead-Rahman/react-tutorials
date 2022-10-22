@@ -2,7 +2,7 @@ import React from 'react';
 import Button from './Button';
 
 class Clock extends React.Component {
-    state = { date: new Date(), locale: 'bn-BD' };
+    state = { date: new Date(), locale: 'en-US' };
 
     componentDidMount() {
         this.clockTimer = setInterval(() => this.tick(), 1000);
@@ -41,4 +41,5 @@ class Clock extends React.Component {
 }
 
 export default Clock;
+
 
