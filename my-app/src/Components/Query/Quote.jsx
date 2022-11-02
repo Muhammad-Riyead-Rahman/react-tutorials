@@ -6,7 +6,7 @@ const Quote = () => {
   
   return (
     <div>
-      <h1>Get Quote Using Fetch API</h1>
+      <h1>Get Quote Using React Query</h1>
       <div>{data?.content}</div>
     </div>
   )
