@@ -1,47 +1,13 @@
-import React from 'react';
-import ClickCounter from './Components/ClickCounter';
-import Counter from './Components/Counter';
-import Section from './Components/Section';
-import ThemeContext from './contexts/themeContext';
+import Form from './components/formHandeling/Form';
 
-export default class App extends React.Component {
-  state = {
-    theme: 'dark',
-  };
-
-  switchTheme = () => {
-    this.setState(({ theme }) => {
-
-      if (theme === 'dark') {
-        return {
-          theme: 'light',
-        };
-      }
-
-      return {
-        theme: 'dark',
-      };
-    });
-  }
-
-  render() {
-    const { theme } = this.state;
-
-    return (
-      <div className="app">
-
-        <Counter>
-          {(counter, incrementCount) => (
-            <ClickCounter count={counter} incrementCount={incrementCount} />
-          )}
-        </Counter>
-
-        <ThemeContext.Provider value={{ theme, switchTheme: this.switchTheme }}>
-          <Section />
-        </ThemeContext.Provider>
-        
-      </div>
-    );
-  }
+function App() {
+  return (
+    <div>
+      <Form />
+    </div>
+  );
 }
+
+export default App;
+
 
